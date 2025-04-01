@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Task Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: lightgray;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    #colorButton {
+      background-color: #007BFF;
+      color: white;
+      transition: 0.3s ease;
+    }
+
+    #colorButton:hover {
+      background-color: #0056b3;
+      scale: 1.05;
+    }
+
+    #greetButton {
+      background-color: #2837a7;
+      color: white;
+    }
+
+    #greetButton:hover {
+      background-color: #1347c8;
+    }
+
+    .calculator {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 300px;
+    }
+
+    input[type="number"] {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .result {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+    
+
+    .task1{
+        background-color: coral;
+        padding: 10px 50px;
+        border: 2px solid black;
+    }
+
+    .task2{
+        background-color: red;
+        padding: 10px 50px;
+        border: 2px solid black;
+
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <h1>Task Demo</h1>
+
+  <div class="task1"><h2>Here is the Color Changing Button:     <button type="button" id="colorButton">Click Me to Change My Color</button>
+  </h2></div>
+  
+  <div class="task2"><h2>Here is the Greeting Button:   <button type="button" id="greetButton">Click Me for Greeting</button></h2></div>
+ 
+
+  <div class="calculator">
+    <h2>Basic Calculator</h2>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <h2 style="margin: 0;">+</h2>
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button type="button" id="calculateButton">Calculate</button>
+    <button type="button" id="clearButton">Clear</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    
+    // task1
+    const colorButton = document.getElementById('colorButton');
+    colorButton.addEventListener('click', () => {
+      const red = Math.floor(Math.random() * 256);
+      const green = Math.floor(Math.random() * 256);
+      const blue = Math.floor(Math.random() * 256);
+      colorButton.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+    });
+
+    // task2
+    
+
+    const greetButton = document.getElementById('greetButton');
+    greetButton.addEventListener('click', () => {
+      const now = new Date();
+      const hour = now.getHours();
+      const minutes = now.getMinutes();
+      let greeting;
+
+      if (hour < 12) {
+        greeting = `Good Morning Boss! Its ${hour}:${minutes} AM`;
+      } else if (hour < 18) {
+        greeting = `Good Afternoon Boss! Its ${hour}:${minutes} PM`;
+      } else {
+        greeting = `Good Evening Boss! Its ${hour}:${minutes} PM`;
+      }
+
+      alert(greeting);
+    });
+
+
+    //task3
+
+    
+    const calculateButton = document.querySelector('#calculateButton');
+    const clearButton = document.querySelector('#clearButton');
+    const result = document.querySelector('#result');
+
+    calculateButton.style.backgroundColor = '#00ffff'
+    clearButton.style.backgroundColor = '#ff0000'
+
+
+    calculateButton.addEventListener('click', () => {
+      const num1 = parseFloat(document.querySelector('#num1').value);
+      const num2 = parseFloat(document.querySelector('#num2').value);
+
+      if (isNaN(num1) || isNaN(num2)) {
+        result.textContent = "Please enter valid numbers.";
+      } else {
+        const sum = num1 + num2;
+        result.textContent = `Result: ${sum}`;
+      }
+    });
+    clearButton.addEventListener('click', () => {
+    document.getElementById('num1').value = '';
+    document.getElementById('num2').value = '';
+    result.textContent = '';
+
+    });
+  </script>
+</body>
+</html>

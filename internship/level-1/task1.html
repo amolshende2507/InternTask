@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cognifyz - Where Data Meets Intelligence</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #1E90FF; 
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    nav a {
+      float: left;
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #87CEFA;
+      color: black;
+    }
+
+    header {
+      background-color: #1219e5;
+      color: white;
+      padding: 20px 0;
+      margin-top: 50px; 
+      display: flex;
+      justify-content: center;
+      
+    }
+
+    header h1 {
+      margin: 0;
+
+    }
+
+  
+    .image {
+      display: flex;
+      justify-content: center;
+    }
+
+    img {
+      margin-top: 20px;
+      max-width: 100%;
+      height: 500px;
+      
+    }
+
+    p{
+      padding: 10px;
+    }
+
+    form {
+      margin: 20px auto;
+      width: 300px;
+    }
+
+  
+    .content {
+      background-color: lightgrey;
+      margin: 20px;
+      text-align: left;
+    }
+
+    #contact {
+      background: #ffffff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    #contact label {
+      font-weight: bold;
+      color: #333;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    #contact input, #contact textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .submit-btn {
+      background-color: #1E90FF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #1E90FF;
+      transform: scale(1.05);
+    }
+
+    .submit-btn:active {
+      background-color: #1219e5;
+      transform: scale(0.95);
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header id="home">
+    <h1>Technology in business</h1>
+   
+  </header>
+
+
+  <div class="content">
+    <p>Technology has become the backbone of modern business operations, driving efficiency and innovation across industries.
+       From automating routine tasks to providing real-time data insights, technology empowers organizations to stay competitive.
+    </p>
+    <p>Businesses today leverage cutting-edge tools such as artificial intelligence, cloud computing, and data analytics to optimize workflows and enhance 
+      decision-making processes. These advancements help companies deliver better products and services to their customers.</p>
+    <p>As technology continues to evolve, businesses must adapt and innovate to meet the demands of an ever-changing market. 
+      Embracing digital transformation is not just an option—its a necessity for sustained growth and success.
+    </p>
+  </div>
+
+  <div class="image"id="about" >
+    <img src="sampleimg.jpg" alt="Placeholder Image">
+
+  </div>
+
+  <div class="content">
+    <p>Digital transformation has revolutionized industries by enabling seamless communication, improved productivity, and enhanced customer experiences.
+       Businesses can now reach global audiences and provide personalized solutions like never before.
+    </p>
+    <p>Emerging technologies like blockchain and IoT are creating new opportunities for innovation. From securing transactions to optimizing supply chains, 
+      these tools are reshaping how businesses operate and interact with their ecosystems.
+    </p>
+    <p>Remote work, powered by technology, has become the new norm, fostering flexibility and collaboration across geographies.
+       Tools like video conferencing, cloud storage, and project management software have bridged the gap between teams worldwide.
+    </p>
+  </div>
+
+  <header>
+    <h1>Form</h1>
+  </header>
+
+  
+  <form id="contact">
+   
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter your email">
+
+    <label for="quires">Queries:</label>
+    <textarea id="quires" cols="30" rows="5" placeholder="Write your query here"></textarea>
+
+    <button type="button" class="submit-btn" >Submit</button>
+  </form>
+</body>
+</html>

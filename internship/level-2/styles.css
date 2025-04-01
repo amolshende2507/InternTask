@@ -1,0 +1,212 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.header {
+  background-color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+ 
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+
+  list-style: none;
+  overflow: hidden;
+  display: flex;
+}
+
+.header li {
+  flex: 1;
+  text-align: center;
+
+
+}
+
+.header li a {
+  display: block;
+  padding: 15px 6px;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header li a:hover {
+  background-color: #555;
+}
+
+.header .logo {
+  float: left;
+  font-size: 1.8em;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+
+}
+
+.header .menu-btn {
+  display: none; 
+}
+
+.header .menu-icon {
+  display: none;
+}
+
+
+
+section {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  color: #fff;
+}
+
+section .content {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+
+}
+
+section .content h1 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+section .content p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+section .content .cta {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #fff;
+  color: #333;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section .content .cta:hover {
+  background: #333;
+  color: #fff;
+}
+
+section .image {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+section .image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#home {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+#work {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+#about {
+  background: linear-gradient(to right, #43cea2, #185a9d);
+}
+
+#careers {
+  background: linear-gradient(to right, #f7971e, #ffd200);
+}
+
+#contact {
+  background: linear-gradient(to right, #1d2b64, #f8cdda);
+}
+@media (max-width: 768px) {
+  .header ul {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+  }
+
+  .header .menu-btn:checked ~ ul {
+    display: flex;
+  }
+
+  .header .menu-icon {
+    display: inline-block;
+    float: right;
+    padding: 15px 20px;
+    cursor: pointer;
+  }
+
+  .header .menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+    transition: 0.3s;
+  }
+
+  .header .menu-btn:checked ~ .menu-icon span:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+  }
+
+  .header .menu-btn:checked ~ .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header .menu-btn:checked ~ .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+  }
+  .header .menu{
+    padding: 0%;
+  }
+  
+  section {
+    flex-direction: column;
+    height: 70vh;
+  }
+
+  section .content, section .image {
+    max-width: 100%;
+  }
+
+  section .image {
+    margin-top: 20px;
+  }
+
+  section .content h1{
+    font-size: larger;
+  }
+  section .content p{
+    font-size: small;
+  }
+
+}
+
